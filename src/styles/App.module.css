@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+
+body {
+    font-family: 'Google Sans', sans-serif;
+}
+
+img {
+    max-height: 200px;
+}
+
+.clicked {
+    animation-name: flash;
+    animation: flash 3s ease;
+    background-color: lightgreen;
+}
+
+@keyframes flash {
+    0%  {
+        background-color: lightgreen;
+    }
+
+    100% {
+        background-color: initial;
+    }
+}
+
+.logoDiv {
+    display: flex;
+    align-items: center;
+}
+
+.logoDiv img {
+    max-height: 100px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+}
+
+.links {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.cartContainer {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+}
+
+a {
+    text-decoration: none;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.homeDiv {
+    text-align: center;
+}
+
+.cardContainer {
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    margin-left: 10rem;
+    margin-right: 10rem;
+    gap: 50px;
+}
+
+.card {
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px lightgray;
+    max-width: 300px;
+    max-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    gap: 10px;
+}
+
+.card > img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: contain;
+}
+
+.card > div > input {
+    max-width: 50px;
+}
+
+.buyContainer {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}

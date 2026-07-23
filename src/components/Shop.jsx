@@ -1,13 +1,14 @@
 import Card from './Card'
 import { useOutletContext } from "react-router"
+import styles from "../styles/App.module.css"
+
 
 const Shop = () => {
     const { items } = useOutletContext();
 
     return (
         <>
-            <h1>Shop</h1>
-            <div className="card-container">
+            <div className={styles.cardContainer}>
                 {items.map((item) => (
                     <Card item={item}/>
                 ))}
