@@ -7,8 +7,9 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "test": "vitest"
+    "preview": "npm run build && wrangler dev",
+    "test": "vitest",
+    "deploy": "npm run build && wrangler deploy"
   },
   "dependencies": {
     "@emnapi/core": "^1.11.2",
@@ -19,6 +20,7 @@
     "vitest": "^4.1.10"
   },
   "devDependencies": {
+    "@cloudflare/vite-plugin": "^1.46.0",
     "@eslint/js": "^10.0.1",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.2",
@@ -31,6 +33,7 @@
     "eslint-plugin-react-refresh": "^0.5.3",
     "globals": "^17.7.0",
     "jsdom": "^29.1.1",
-    "vite": "^8.1.1"
+    "vite": "^8.1.1",
+    "wrangler": "^4.113.0"
   }
 }
