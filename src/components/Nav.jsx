@@ -1,10 +1,15 @@
 import { Link } from "react-router"
 import styles from "../styles/App.module.css"
 import logo from "../assets/store.jpg"
+import { useContext, createContext } from "react";
+import { ShopContext } from "../App.jsx"
+
 const Nav = ({getTitle, setTitle, cartItems}) => {
 
+    const {products} = useContext(ShopContext);
+    console.log(products);
+
     function getCartTotal() {
-        console.log(cartItems);
         let total = 0;
         cartItems.forEach((item) => {
             total += item.value;
